@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Accordion Component</title>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /* MAIN COLOR: #087f5b
+      GREY COLOR : #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        width: 800px;
+        margin-top: 100px;
+        font-size: 18px;
+        /* border: 1px solid #343a40; */
+        /* 邊界塌陷
+        當有兩個邊界彼此靠近時
+        就像現在這樣
+        可以讓它們崩潰
+        意味著這些基本上將被放在一起
+        成為一個邊界 */
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        /* border: 1px solid #343a40; */
+        padding: 16px 24px;
+        text-align: left;
+      }
+      thead tr {
+        background-color: #087f5b;
+        color: #fff;
+      }
+      thead th {
+        width: 25%;
+      }
+      /* 奇數 */
+      tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+      /* 偶數 */
+      tbody tr:nth-child(even) {
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- 對每一行 使用tr元素 
+      在行的內部 對於每一列
+      基本上對於每一段數據
+      使用一個td元素-->
+      <!-- 如果想把它標記為標頭
+      還需要在這裏使用一個元素th
+      使用th
+      基本上是這組單元格中的表頭單元格 -->
+      <thead>
+        <tr>
+          <th>Chairth</th>
+          <th>The Laid Back</th>
+          <th>The Worker Bee</th>
+          <th>The Chair 4/2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>Width</th>
+          <td>80 cm</td>
+          <td>60 cm</td>
+          <td>220 cm</td>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <td>100 cm</td>
+          <td>110 cm</td>
+          <td>90 cm</td>
+        </tr>
+        <tr>
+          <th>Depth</th>
+          <td>70 cm</td>
+          <td>65 cm</td>
+          <td>80 cm</td>
+        </tr>
+        <tr>
+          <th>Weight</th>
+          <td>16 kg</td>
+          <td>22 kg</td>
+          <td>80 kg</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
