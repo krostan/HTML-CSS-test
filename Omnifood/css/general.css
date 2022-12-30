@@ -34,7 +34,8 @@ Paragrph default: 1.6
 #45260a
 - Accents:
 - Greys
-
+#888
+#767676 (lightest grey allowed on #fff)
 #6F6F6F (lightest grey allowed on #fdf2e9)
 #555
 #333
@@ -95,7 +96,7 @@ body {
   margin-bottom: 0;
 } */
 
-.grid:not(last-child) {
+.grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
 
@@ -109,6 +110,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
