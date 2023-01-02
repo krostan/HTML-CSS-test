@@ -1,0 +1,71 @@
+/* rem and em do NOT depend on html font-size in media queries! 
+Instead, 1 rem = 1 em = 16px
+rem 根據字體大小
+em 基本上是當前字體大小
+有時 rem 在一些瀏覽器中用於media查詢時 顯然有一些BUG
+因此不應該在media查詢中使用rem 而應該使用em*/
+
+/**********************************/
+/* BELOW 1344 (Smaller desktops)*/
+/**********************************/
+
+@media (max-width: 84em) {
+  /* 這裡的rem 跟上面的 em 沒有關西
+    (hero)它的工作方式 仍然跟以前完全一樣*/
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**********************************/
+/* BELOW 1200 (Landscape Yablets)*/
+/**********************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px =0.5625 原本是10px*/
+    font-size: 56.25%;
+  }
+  .grid() {
+    column-gap: 4.8rem;
+    row-gap: 6rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .testimonals-container {
+    padding: 9.6rem 4.8rem;
+  }
+}
+
+/*
+- Font size  (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
