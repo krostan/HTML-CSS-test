@@ -17,6 +17,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragrph default: 1.6
+Large:1.8
 
 - Letter spacing
 -05px 
@@ -65,12 +66,22 @@ html {
   /* Percentage of user's brpwser font-size setting */
   /* 用戶瀏覽器字體大小設置的百分比 */
   font-size: 62.5%;
+  /* mobile */
+  overflow-x: hidden;
 }
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+  /* 所有在X軸(水平)溢出視口的元素
+  都將被隱藏 */
+  /* 只在沒有任何東西相對於body
+  絕對定位時 才起作用 */
+  /* Only works if there is nothing absolutely positioned in relation
+  to body */
+  /* mobile */
+  overflow-x: hidden;
 }
 
 /**********************************/
@@ -277,6 +288,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {

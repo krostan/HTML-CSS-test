@@ -11,6 +11,8 @@
   /* because we went header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
+  /* mobile */
+  position: relative;
 }
 
 .logo {
@@ -52,6 +54,33 @@
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
+}
+
+/**********************************/
+/* MOBILE */
+/**********************************/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  /* 對於正常寬度 
+  隱藏此icon */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+/* <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button> */
+
+.icon-mobile-nav[name="close-outline"] {
+  /* 隱藏 */
+  display: none;
 }
 
 /**********************************/
@@ -364,12 +393,12 @@
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
   width: 75%;
 }
 
-.princing-plan--starter {
+.pricing-plan--starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   /* 由於加入邊框 2px
@@ -377,14 +406,14 @@
   padding: 4.6rem;
 }
 
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.princing-plan--complete::after {
+.pricing-plan--complete::after {
   content: "best value";
   position: absolute;
   top: 6%;
